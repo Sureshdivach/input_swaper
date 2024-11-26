@@ -6,12 +6,12 @@ function App() {
   const [inputValue2,setINputValue2]=useState("")
  
  const _handelChange=(field)=>{ 
- if(field==="submit1") {
-  setINputValue1("");
-  setINputValue2(inputValue1)
+ if((field==="submit1")&& (!inputValue1=="")){
+   setINputValue2(inputValue1)
+   setINputValue1("");
    
 }  
- else if (field==="submit2"){  
+ else if((field==="submit2") && (!inputValue2=="")){  
   setINputValue1(inputValue2)
   setINputValue2("")     
  }
