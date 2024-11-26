@@ -1,0 +1,63 @@
+.App {
+  // border: 1px solid gray;
+  width: 25%;
+  height: 30vh;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px;
+  @media screen and (min-width:"200px") and (max-width:"881px") {
+    display: block;
+    width: 90%;
+    padding: 0px;
+    height: 80vh;
+    
+  }
+  & h1{
+    text-align: center;
+    color: rgb(153, 211, 245);
+    margin-bottom: 10px;
+  }
+  & .input_container{
+    // border:1px solid gray;
+    margin: 25px auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    @media screen and (min-width:"200px") and (max-width:"881px") {
+      display: block;
+      width: 90%;
+      padding: 0px;
+      
+    }
+    & input{
+      width: 90%;
+      padding: 5px 10px;
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 8px;
+      &:focus{
+        outline: none;
+      }
+    }
+    & button{
+      margin: 20px 20px;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: none;
+      align-content: center;
+      width: 80%;
+      font-weight: 600;
+      background-color: rgb(175, 255, 186);
+      @media screen and (min-width:"200px") and (max-width:"881px") {
+        display: block;
+        width: 50%;
+        padding: 10px;
+        margin: 20px auto;
+       
+      }
+    }
+  }
+  
+}
+
+

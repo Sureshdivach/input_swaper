@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.scss';
 
 function App() {
+  const [inputValue1,setINputValue1]=useState("")
+  const [inputValue2,setINputValue2]=useState("")
+ 
+ const _handelChange=(field)=>{ 
+ if(field==="submit1") {
+  setINputValue1("");
+  setINputValue2(inputValue1)
+   
+}  
+ else if (field==="submit2"){  
+  setINputValue1(inputValue2)
+  setINputValue2("")     
+ }
+}
+  console.log(inputValue1)
+  console.log(inputValue2)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+     
+      <h1>Input Swapper</h1> <hr className='w-100 m-auto'/>
+      <div className='input_container '>
+    <div className=''>
+      <label  className='fw-bold'> Input 1</label><br/>
+      <input type='text'    value={inputValue1}  onChange={(e)=>{setINputValue1(e.target.value)}}/> <br/>
+      <button   onClick={() => _handelChange("submit1")}  > Move 2</button>
+    </div>
+    <div>
+    <label className='fw-bold'> Input 2</label><br/>
+      <input type='text' value={inputValue2} onChange={(e)=>{setINputValue2(e.target.value)}}/> <br/>
+      <button  onClick={() => _handelChange("submit2")}> Move 1</button>
+    </div>
+    </div>
     </div>
   );
 }
