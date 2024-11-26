@@ -15,6 +15,9 @@ function App() {
   setINputValue1(inputValue2)
   setINputValue2("")     
  }
+ else{
+  alert("Please enter fields")
+ }
 }
   console.log(inputValue1)
   console.log(inputValue2)
